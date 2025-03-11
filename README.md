@@ -25,7 +25,7 @@ Buzzer
 - GND -> Buzzer -> D6
 
 ## Notwendige Bibliotheken
-Stellen Sie sicher, dass die folgenden Bibliotheken über den Bibliotheks-Manager installiert sind:
+Stelle sicher, dass die folgenden Bibliotheken über den Bibliotheks-Manager installiert sind:
 - Adafruit SSD1306 einschließlich Adafruit GFX
 
 ## Optimierung
