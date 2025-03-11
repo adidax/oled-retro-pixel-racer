@@ -1,37 +1,42 @@
 # OLED Retro Pixel Racer
 
-Retro Racer mit OLED Display 128x64
-https://www.makerblog.at
+Retro Racer mit OLED Display 128x64  
+[Makerblog.at](https://www.makerblog.at)
 
+## Hardware-Anforderungen
 - Arduino UNO R3 (oder vergleichbar)
 - OLED I2C Display 128x64 mit SSD1306
 
-Verkabelung:
- 
+## Verkabelung
+
 OLED -> Arduino UNO R3
-SDA -> A4
-SVL -> A5
-GND -> GND
-VIN -> 5V
+- SDA -> A4
+- SCL -> A5
+- GND -> GND
+- VIN -> 5V
 
-Push Button LINKS   GND - Push Button - D2
-Push Button RECHTS  GND - Push Button - D3
+Push Button LINKS  
+- GND -> Push Button -> D2
 
-Buzzer              GND - Buzzer - D6
+Push Button RECHTS  
+- GND -> Push Button -> D3
 
-Folgende Libraries müssen installiert sein, bei Fehlermeldung bitte mit dem Library Manager kontrollieren
-- Adafruit SSD1306 inkl. Adafruit GFX
+Buzzer  
+- GND -> Buzzer -> D6
 
-Optimierung:
--------------
+## Notwendige Bibliotheken
+Stellen Sie sicher, dass die folgenden Bibliotheken über den Bibliotheks-Manager installiert sind:
+- Adafruit SSD1306 einschließlich Adafruit GFX
+
+## Optimierung
 Um Gleitkommazahlen (float) zu vermeiden, werden alle relevanten Positionen und Geschwindigkeiten mit dem Faktor 10 skaliert und als int gespeichert. Dies verbessert die Performance und vermeidet Rundungsfehler.
 
-Skalierte Werte:
-- Alle x- und y-Koordinaten werden *10 gespeichert.
-- Alle Geschwindigkeiten sind *10 gespeichert.
-- Zur Darstellung auf dem Display werden diese Werte durch 10 geteilt .
+### Skalierte Werte:
+- Alle x- und y-Koordinaten werden mit *10 gespeichert.
+- Alle Geschwindigkeiten sind mit *10 gespeichert.
+- Zur Darstellung auf dem Display werden diese Werte durch 10 geteilt.
 
-Beispiel:
+### Beispiel:
 - Ein Auto mit x = 150 befindet sich in Wirklichkeit bei 15.0 Pixeln auf dem Display.
 - Die Geschwindigkeit playerSpeed = 25 bedeutet eine Änderung von 2.5 px pro Frame.
 
