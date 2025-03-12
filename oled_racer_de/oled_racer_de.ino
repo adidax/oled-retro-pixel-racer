@@ -9,7 +9,7 @@
  
  OLED -> Arduino UNO R3
  SDA -> A4
- SVL -> A5
+ SCL -> A5
  GND -> GND
  VIN -> 5V
 
@@ -119,8 +119,8 @@ int spawnProbability = 5;                  // Start-Wahrscheinlichkeit für neue
 int maxActiveObstacles = 5;                // Start mit 5 Gegnern
 int dashedLineOffset = 0;                  // Offset für die Bewegung der gestrichelten Linien
 long distanceCounter = 0;                  // Gesamt zurückgelegte Strecke in Pixeln
-int playerSpeed = 20;                      // Geschwindigkeit der Hindernisse
-int laneSpeeds[LANES] = { 13, 10, 8, 5 };  // Geschwindigkeiten in px mit Faktor 10
+int playerSpeed = 15;                      // Geschwindigkeit des Spielers
+int laneSpeeds[LANES] = { 13, 10, 8, 5 };  // Geschwindigkeiten auf Fahrspuren in px mit Faktor 10
 int laneCooldown[LANES] = { 0 };           // Zähler für Sperrzeit pro Spur
 const int MIN_FRAMES_BETWEEN_SPAWNS = 20;  // Mindestwartezeit pro Spur vor neuem Gegner
 
